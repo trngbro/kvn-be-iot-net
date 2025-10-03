@@ -36,7 +36,7 @@ XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
 
 builder.Services.AddDbContext<MQTTContext>((serviceProvider, options) =>
 {
-    var connectionString = builder.Configuration.GetConnectionString("Viags");
+    var connectionString = builder.Configuration.GetConnectionString("IoT_KVN");
     options.UseSqlServer(connectionString, sqlOptions =>
     {
         sqlOptions.CommandTimeout(int.MaxValue);
