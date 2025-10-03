@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLibrary\Common.Authorization\Common.Authorization.csproj" />
+    <ProjectReference Include="..\CommonLibrary\Common.UnitOfWork\Common.UnitOfWork.csproj" />
+    <ProjectReference Include="..\CommonLibrary\Common.Utils\Common.Utils.csproj" />
+    <ProjectReference Include="..\DomainService\DomainService.csproj" />
+    <ProjectReference Include="..\Model\Entity\Entity.csproj" />
+    <ProjectReference Include="..\Model\Model\Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.16.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Implements\Service\" />
+  </ItemGroup>
+
+</Project>
